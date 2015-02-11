@@ -134,5 +134,31 @@ DEMO.AccessibleModal = (function($) {
 
 } (jQuery));
 
+DEMO.ConfirmationMessage = {
+    init: function() {
+        this.$confirmationMessage = $('.js-confirmationMessage');
+
+        this.confirmationMessage = this.$confirmationMessage.data('message');
+
+        this.$confirmBtn = $('.js-confirmBtn');
+
+        return this._setupHandlers()
+                   .enable();
+    },
+    _setupHandlers: function() {
+        this._onClickConfirmBtn = this._onClickConfirmBtn.bind(this);
+
+        return this;
+    },
+    enable: function() {
+        this.$confirmBtn.on('click', this._onClickConfirmBtn);
+    },
+    _onClickConfirmBtn: function() {
+        this.$confirmationMessage.text(this.confirmationMessage);
+    }
+};
+
 var modal = new DEMO.Modal($('.js-modal'));
 var accessibleModal = new DEMO.AccessibleModal($('.js-accessibleModal'));
+
+DEMO.ConfirmationMessage.init();

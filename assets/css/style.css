@@ -61,6 +61,10 @@ body {
     line-height: 1.5;
 }
 
+strong {
+    font-weight: bold;
+}
+
 /* --------------------------
 -- Landmarks
 -------------------------- */
@@ -132,13 +136,27 @@ body {
     margin-bottom: 15px;
 }
 
-.content-bd > * + * { margin-top: 10px; }
+.content-bd > * + * { margin-top: 20px; }
 
 .content-ft {
+    margin-top: 15px;
     padding-top: 15px;
+    border-top: 1px solid #000000;
 }
 
 .content-ft_alignRight { text-align: right; }
+
+/* Message */
+
+.message {
+    margin-bottom: 20px;
+}
+
+.message:not(:empty) {
+    padding: 20px;
+    background: green;
+    color: white;
+}
 
 /* --------------------------
 -- Layout
@@ -151,3 +169,11 @@ body {
     margin: auto;
     padding: 0 20px;
 }
+
+/* hList */
+
+.hList > * {
+    display: inline-block;
+}
+
+.hList > * + * { margin-left: 10px; }

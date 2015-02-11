@@ -17,24 +17,60 @@
 
     <div class="main" role="main">
         <div class="wrapper">
+            <div class="message js-confirmationMessage"
+                 data-message="Thank you for odering our delicious pizza!"></div>
             <div class="content">
                 <div class="content-hd">
-                    <h1 class="hdg">Accessibility, A Love Story</h1>
+                    <h1 class="hdg">Ordering a pizza</h1>
                 </div>
                 <div class="content-bd">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe quaerat aut, et ex, perferendis non fuga harum iste quia sunt nobis nam, delectus reiciendis debitis dicta facilis vel suscipit ratione.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui possimus adipisci voluptates eligendi eum, debitis architecto, quam, blanditiis pariatur at repudiandae? Deserunt cupiditate molestias pariatur, autem ut eum accusamus fugiat ratione enim sed debitis asperiores eos, corporis animi, suscipit dolores odit ad impedit laudantium ullam doloribus inventore dolore nihil. Iure?</p>
+                    <p>Everybody loves pizza, which is, presumably, why the internet is so popular (it makes ordering pizza fast and simple). Not all websites, however, take advantage of the technologies that make the web accessible to all. This makes it hard for the less-abled to perform, otherwise, simple tasks. For example, a design that uses vague color contrast is difficult to see for those with vision impairments. And for those who navigate the web via keyboard, poor focus management makes a simple task, such as ordering a pizza, challenging.</p>
                     <div>
-                        <button data-modal="modal">Open modal</button>
+                        <div>
+                            <strong>What toppings do you want on your pizza?</strong>
+                        </div>
+                        <label for="pepperoni">
+                            <input type="checkbox" id="pepperoni" name="toppings" value="pepperoni">
+                            Pepperoni
+                        </label>
+                        <label for="sausage">
+                            <input type="checkbox" id="sausage" name="toppings" value="sausage">
+                            Sausage
+                        </label>
+                        <label for="wheel_of_cheese">
+                            <input type="checkbox" id="wheel_of_cheese" name="toppings" value="wheel_of_cheese">
+                            A wheel of cheese
+                        </label>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem et pariatur minus eius nesciunt iusto sunt reprehenderit atque neque id distinctio rem, quod! Consequuntur possimus blanditiis sequi expedita delectus eum?</p>
                     <div>
-                        <button data-modal="modal">Open modal</button>
+                        <div>
+                            <strong>What size pizza do you want?</strong>
+                        </div>
+                        <label for="huge">
+                            <input type="checkbox" id="huge" name="size" value="huge">
+                            Huge
+                        </label>
+                        <label for="all_the_pizza">
+                            <input type="checkbox" id="all_the_pizza" name="size" value="all_the_pizza">
+                            I want all the pizza
+                        </label>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti culpa, cumque sed, est accusamus placeat illo animi error sit, voluptatibus libero quis quibusdam, nesciunt ab distinctio minima omnis debitis obcaecati.</p>
+                    <div>
+                        <button data-modal="modal">Order pizza</button>
+                    </div>
                 </div>
                 <div class="content-ft">
-                    <button data-modal="modal">Open modal</button>
+                    <ul class="hList">
+                        <li>
+                            <a href="#">A link</a>
+                        </li>
+                        <li>
+                            <a href="#">Another link</a>
+                        </li>
+                        <li>
+                            <a href="#">A final link</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -44,11 +80,18 @@
         <div id="modal" class="modal-bd js-modal-bd"
             <div class="content">
                 <div>
-                    <h3 class="hdg">Example of an accessible modal</h3>
-                    <p>I am a modal accessible to all, made with love.</p>
+                    <h3 class="hdg">Confirm your order</h3>
+                    <p>Click to confirm.</p>
                 </div>
                 <div class="content-ft content-ft_alignRight">
-                    <button class="btn js-modal-closeBtn">Close dialog</button>
+                    <div class="hList">
+                        <div>
+                            <button class="btn js-modal-closeBtn">Cancel</button>
+                        </div>
+                        <div>
+                            <button class="btn js-modal-closeBtn js-confirmBtn">Confirm</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
