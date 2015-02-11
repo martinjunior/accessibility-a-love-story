@@ -47,19 +47,46 @@ table {
     border-spacing: 0;
 }
 
+/* --------------------------
+-- End reset
+-------------------------- */
+
+/* --------------------------
+-- Elements
+-------------------------- */
+
 body {
     color: #333333;
     font-family: Arial, sans-serif;
     line-height: 1.5;
 }
 
+/* --------------------------
+-- Landmarks
+-------------------------- */
+
 .main {
     padding: 50px 0;
 }
 
+/* --------------------------
+-- Content
+-------------------------- */
+
 .hdg {
     font-size: 24px;
 }
+
+.btn:focus {
+    outline: 1px dashed #333333;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .6);
+}
+
+/* --------------------------
+-- Modules
+-------------------------- */
+
+/* Modal */
 
 .modal {
     width: 100%;
@@ -86,6 +113,12 @@ body {
     background: #ffffff;
 }
 
+/* --------------------------
+-- Containers
+-------------------------- */
+
+/* Content */
+
 .content-hd {
     margin-bottom: 15px;
 }
@@ -98,10 +131,11 @@ body {
 
 .content-ft_alignRight { text-align: right; }
 
-.btn:focus {
-    outline: 1px dashed #333333;
-    box-shadow: 0 0 5px rgba(0, 0, 0, .6);
-}
+/* --------------------------
+-- Layout
+-------------------------- */
+
+/* Wrapper */
 
 .wrapper {
     max-width: 960px;
