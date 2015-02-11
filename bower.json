@@ -1,0 +1,20 @@
+{
+  "name": "accessibility-demo",
+  "version": "1.0.0",
+  "description": "Laura and Martin's Accessibility demo",
+  "authors": [
+    "Martin Duran",
+    "Laura Shields"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jQuery": "~2.1.3"
+  }
+}

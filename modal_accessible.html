@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Accessibility Demo</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <div class="main" role="main">
+        <div class="wrapper">
+            <div class="content">
+                <div class="content-hd">
+                    <h1 class="hdg">Accessibility, A Love Story</h1>
+                </div>
+                <div class="content-bd">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe quaerat aut, et ex, perferendis non fuga harum iste quia sunt nobis nam, delectus reiciendis debitis dicta facilis vel suscipit ratione.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui possimus adipisci voluptates eligendi eum, debitis architecto, quam, blanditiis pariatur at repudiandae? Deserunt cupiditate molestias pariatur, autem ut eum accusamus fugiat ratione enim sed debitis asperiores eos, corporis animi, suscipit dolores odit ad impedit laudantium ullam doloribus inventore dolore nihil. Iure?</p>
+                    <div>
+                        <button data-modal="modal">Open modal</button>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem et pariatur minus eius nesciunt iusto sunt reprehenderit atque neque id distinctio rem, quod! Consequuntur possimus blanditiis sequi expedita delectus eum?</p>
+                    <div>
+                        <button data-modal="modal">Open modal</button>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti culpa, cumque sed, est accusamus placeat illo animi error sit, voluptatibus libero quis quibusdam, nesciunt ab distinctio minima omnis debitis obcaecati.</p>
+                </div>
+                <div class="content-ft">
+                    <button data-modal="modal">Open modal</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal js-accessibleModal">
+        <fieldset id="modal"
+             class="modal-bd js-modal-bd"
+             tabindex="-1"
+             role="dialog"
+             aria-labelledby="modal-title"
+             aria-describedby="modal-description">
+            <div class="content">
+                <legend>
+                    <h3 id="modal-title" class="hdg">Example of an accessible modal</h3>
+                    <p id="modal-description">I am a modal accessible to all, made with love.</p>
+                </legend>
+                <div class="content-ft content-ft_alignRight">
+                    <button class="btn js-modal-closeBtn">Close dialog</button>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+
+    <script src="assets/vendor/jQuery/dist/jquery.js"></script>
+    <script src="assets/scripts/app.js"></script>
+</body>
+</html>
