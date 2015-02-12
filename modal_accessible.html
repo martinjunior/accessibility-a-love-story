@@ -7,6 +7,8 @@
 </head>
 <body>
 
+    <a href="#main" class="skipToMainContent">Skip to main content</a>
+
     <div class="wrapper">
         <nav class="nav">
             <a href="#">Home</a>
@@ -15,49 +17,37 @@
         </nav>
     </div>
 
-    <div class="main" role="main">
+    <div id="main" class="main" role="main" tabindex="0">
         <div class="wrapper">
-            <div class="message js-confirmationMessage"
-            data-message="Thank you for odering our delicious pizza!"
-            aria-live="polite"></div>
+            <div id="confirmation_message"
+                 class="message js-confirmationMessage"
+                 data-message="Thank you for odering our delicious pizza!"
+                 aria-live="polite"
+                 tabindex="-1"></div>
             <div class="content">
                 <div class="content-hd">
                     <h1 class="hdg">Ordering a pizza</h1>
                 </div>
                 <div class="content-bd">
                     <p>Everybody loves pizza, which is, presumably, why the internet is so popular (it makes ordering pizza fast and simple). Not all websites, however, take advantage of the technologies that make the web accessible to all. This makes it hard for the less-abled to perform, otherwise, simple tasks. For example, a design that uses vague color contrast is difficult to see for those with vision impairments. And for those who navigate the web via keyboard, poor focus management makes a simple task, such as ordering a pizza, challenging.</p>
-                    <fieldset>
-                        <legend>
-                            <strong>Toppings:</strong>
-                        </legend>
-                        <label for="pepperoni">
-                            <input type="checkbox" id="pepperoni" name="toppings" value="pepperoni">
-                            Pepperoni
-                        </label>
-                        <label for="sausage">
-                            <input type="checkbox" id="sausage" name="toppings" value="sausage">
-                            Sausage
-                        </label>
-                        <label for="wheel_of_cheese">
-                            <input type="checkbox" id="wheel_of_cheese" name="toppings" value="wheel_of_cheese">
-                            A wheel of cheese
-                        </label>
-                    </fieldset>
-                    <fieldset>
-                        <legend>
-                            <strong>Size:</strong>
-                        </legend>
-                        <label for="huge">
-                            <input type="checkbox" id="huge" name="size" value="huge">
-                            Huge
-                        </label>
-                        <label for="all_the_pizza">
-                            <input type="checkbox" id="all_the_pizza" name="size" value="all_the_pizza">
-                            All the pizza
-                        </label>
-                    </fieldset>
-                    <div>
-                        <button data-modal="modal">Place order</button>
+                    <h2 class="hdg">Select your pizza</h2>
+                    <div class="blocks blocks_4up">
+                        <div>
+                            <h3 class="hdg">Pepperoni</h3>
+                            <button data-modal="modal">Order</button>
+                        </div>
+                        <div>
+                            <h3 class="hdg">Sausage</h3>
+                            <button data-modal="modal">Order</button>
+                        </div>
+                        <div>
+                            <h3 class="hdg">Cheese</h3>
+                            <button data-modal="modal">Order</button>
+                        </div>
+                        <div>
+                            <h3 class="hdg">Meat Lovers</h3>
+                            <button data-modal="modal">Order</button>
+                        </div>
                     </div>
                 </div>
                 <div class="content-ft">
@@ -94,7 +84,7 @@
                             <button class="btn js-modal-closeBtn">Cancel</button>
                         </div>
                         <div>
-                            <button class="btn js-modal-closeBtn js-confirmBtn">Confirm</button>
+                            <button class="btn js-modal-closeBtn js-confirmBtn" aria-controls="confirmation_message">Confirm</button>
                         </div>
                     </div>
                 </div>
