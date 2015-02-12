@@ -65,6 +65,10 @@ strong {
     font-weight: bold;
 }
 
+*:focus {
+    box-shadow: 0 0 10px blue;
+}
+
 /* --------------------------
 -- Landmarks
 -------------------------- */
@@ -168,10 +172,6 @@ strong {
     margin: auto;
     padding: 25px;
     background: #ffffff;
-}
-
-*:focus {
-    box-shadow: 0 0 5px rgba(0, 128, 255, .5);
 }
 
 /* --------------------------
