@@ -89,6 +89,18 @@ DEMO.AccessibleModal = (function($) {
 
     var proto = AccessibleModal.prototype;
 
+    proto._createChildren = function() {
+        this.$modalBody = this.$element.find('.js-modal-bd');
+
+        this.$triggers = $('[data-modal="' + this.$modalBody.attr('id') + '"]');
+
+        this.$closeBtn = this.$element.find('.js-modal-closeBtn');
+
+        this.$firstSelectableItem = this.$element.find('.js-modal-bd-firstSelectableItem');
+
+        return this;
+    }
+
     proto._setupHandlers = function() {
         this._onClickTrigger = this._onClickTrigger.bind(this);
 
@@ -113,7 +125,7 @@ DEMO.AccessibleModal = (function($) {
 
     proto.show = function() {
         this.$element.addClass('isActive');
-        this.$modalBody.focus();
+        this.$firstSelectableItem.focus();
     }
 
     proto.hide = function() {
@@ -126,7 +138,7 @@ DEMO.AccessibleModal = (function($) {
         var targetIsNotInsideModal = $.contains(this.$element.get(0), event.target);
 
         if (modalIsActive && !targetIsNotInsideModal) {
-            this.$modalBody.focus();
+            this.$firstSelectableItem.focus();
         }
     }
 

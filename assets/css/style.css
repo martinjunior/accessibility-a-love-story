@@ -123,6 +123,22 @@ strong {
     text-align:center;
 }
 
+/* Label */
+
+.label {
+    display: block;
+}
+
+/* Input */
+
+.input {
+    display: block;
+}
+
+.input_textarea {
+    min-height: 90px;
+}
+
 /* --------------------------
 -- Modules
 -------------------------- */
