@@ -155,6 +155,7 @@ DEMO.ConfirmationMessage = {
     },
     _onClickConfirmBtn: function() {
         this.$confirmationMessage.text(this.confirmationMessage);
+        this.$confirmationMessage.focus();
     }
 };
 
